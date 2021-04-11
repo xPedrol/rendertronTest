@@ -1,23 +1,23 @@
-import {Component, OnInit} from '@angular/core';
-import {SeoService} from './services/seo.service';
+import { Component, OnInit } from '@angular/core';
+import {SeoService} from '../services/seo.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'rendertronTest';
+export class TestComponent implements OnInit {
 
   constructor(private seo: SeoService) {
   }
 
   ngOnInit(): void {
     this.seo.generateTags({
-      title: 'Home',
+      title: 'Test',
       description: 'Contact me through this awesome search engine optimized Angular component',
       image: 'https://www.example.com/assets/meerkat.jpeg',
       slug: 'about-page'
     });
   }
+
 }
